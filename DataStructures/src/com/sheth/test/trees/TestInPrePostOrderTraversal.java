@@ -7,8 +7,8 @@ import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import con.sheth.trees.BinaryTreeNode;
-import con.sheth.trees.InPrePostOrderTraversal;
+import com.sheth.trees.BinaryTreeNode;
+import com.sheth.trees.InPrePostOrderTraversal;
 
 class TestInPrePostOrderTraversal {
 

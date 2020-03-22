@@ -1,4 +1,4 @@
-package con.sheth.trees;
+package com.sheth.trees;
 
 import java.util.ArrayList;
 import java.util.List;
