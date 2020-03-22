@@ -8,17 +8,17 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import com.sheth.trees.BinaryTreeNode;
-import com.sheth.trees.InPrePostOrderTraversal;
+import com.sheth.trees.InPrePostOrderTraversal_DFS;
 
-class TestInPrePostOrderTraversal {
+class TestInPrePostOrderTraversal_DFS {
 
 
-	private InPrePostOrderTraversal<Integer> testInPrePostOrderTraversal;
+	private InPrePostOrderTraversal_DFS<Integer> testInPrePostOrderTraversal_DFS;
 	private BinaryTreeNode<Integer> root;
 
 	@BeforeEach
 	void setup() {
-		testInPrePostOrderTraversal = new InPrePostOrderTraversal<Integer>();
+		testInPrePostOrderTraversal_DFS = new InPrePostOrderTraversal_DFS<Integer>();
 		root = new BinaryTreeNode<Integer>(10);
 		BinaryTreeNode<Integer> n1 = new BinaryTreeNode<Integer>(5);
 		BinaryTreeNode<Integer> n2 = new BinaryTreeNode<Integer>(20);
@@ -37,8 +37,8 @@ class TestInPrePostOrderTraversal {
 
 	@Test
 	void testInOrder() {
-		testInPrePostOrderTraversal.inOrder(root);
-		List<Integer> visitedNodes = testInPrePostOrderTraversal.getVisited();
+		testInPrePostOrderTraversal_DFS.inOrder(root);
+		List<Integer> visitedNodes = testInPrePostOrderTraversal_DFS.getVisited();
 		assertEquals(visitedNodes.get(0).intValue(), 9);
 		assertEquals(visitedNodes.get(3).intValue(), 10);
 		assertEquals(visitedNodes.get(6).intValue(), 7);
@@ -46,8 +46,8 @@ class TestInPrePostOrderTraversal {
 
 	@Test
 	void testPreOrder() {
-		testInPrePostOrderTraversal.preOrder(root);
-		List<Integer> visitedNodes = testInPrePostOrderTraversal.getVisited();
+		testInPrePostOrderTraversal_DFS.preOrder(root);
+		List<Integer> visitedNodes = testInPrePostOrderTraversal_DFS.getVisited();
 		assertEquals(visitedNodes.get(0).intValue(), 10);
 		assertEquals(visitedNodes.get(3).intValue(), 18);
 		assertEquals(visitedNodes.get(6).intValue(), 7);
@@ -55,8 +55,8 @@ class TestInPrePostOrderTraversal {
 
 	@Test
 	void testPostOrder() {
-		testInPrePostOrderTraversal.postOrder(root);
-		List<Integer> visitedNodes = testInPrePostOrderTraversal.getVisited();
+		testInPrePostOrderTraversal_DFS.postOrder(root);
+		List<Integer> visitedNodes = testInPrePostOrderTraversal_DFS.getVisited();
 		assertEquals(visitedNodes.get(0).intValue(), 9);
 		assertEquals(visitedNodes.get(3).intValue(), 3);
 		assertEquals(visitedNodes.get(6).intValue(), 10);

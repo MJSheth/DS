@@ -4,6 +4,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+// https://www.youtube.com/watch?v=86g8jAQug04
+
 public class LevelOrderTraversal_BFS<T> {
 	public List<T> getLevelOrder_BFS_Traversal(BinaryTreeNode<T> node) {
 		// Maintains list of all visited nodes in level order traversal
@@ -21,7 +23,7 @@ public class LevelOrderTraversal_BFS<T> {
 			visited.add(temp.getData());
 
 			// Insert children of visited node to queue.
-			// Check if node is null before adding to the Queue otherwose it will add null
+			// Check if node is null before adding to the Queue otherwise it will add null
 			// in queue
 			if (temp.getLeft() != null)
 				discovered.add(temp.getLeft());

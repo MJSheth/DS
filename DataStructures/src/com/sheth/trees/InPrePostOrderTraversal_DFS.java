@@ -3,7 +3,7 @@ package com.sheth.trees;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InPrePostOrderTraversal<T> {
+public class InPrePostOrderTraversal_DFS<T> {
 
 	private List<T> visited = new ArrayList<T>();
 
