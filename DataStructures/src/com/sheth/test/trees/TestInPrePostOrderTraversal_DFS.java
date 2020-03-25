@@ -12,7 +12,6 @@ import com.sheth.trees.InPrePostOrderTraversal_DFS;
 
 class TestInPrePostOrderTraversal_DFS {
 
-
 	private InPrePostOrderTraversal_DFS<Integer> testInPrePostOrderTraversal_DFS;
 	private BinaryTreeNode<Integer> root;
 
@@ -38,7 +37,7 @@ class TestInPrePostOrderTraversal_DFS {
 	@Test
 	void testInOrder() {
 		testInPrePostOrderTraversal_DFS.inOrder(root);
-		List<Integer> visitedNodes = testInPrePostOrderTraversal_DFS.getVisited();
+		List<Integer> visitedNodes = testInPrePostOrderTraversal_DFS.getInOrderVisited();
 		assertEquals(visitedNodes.get(0).intValue(), 9);
 		assertEquals(visitedNodes.get(3).intValue(), 10);
 		assertEquals(visitedNodes.get(6).intValue(), 7);
@@ -47,7 +46,7 @@ class TestInPrePostOrderTraversal_DFS {
 	@Test
 	void testPreOrder() {
 		testInPrePostOrderTraversal_DFS.preOrder(root);
-		List<Integer> visitedNodes = testInPrePostOrderTraversal_DFS.getVisited();
+		List<Integer> visitedNodes = testInPrePostOrderTraversal_DFS.getPreOrderVisited();
 		assertEquals(visitedNodes.get(0).intValue(), 10);
 		assertEquals(visitedNodes.get(3).intValue(), 18);
 		assertEquals(visitedNodes.get(6).intValue(), 7);
@@ -56,12 +55,11 @@ class TestInPrePostOrderTraversal_DFS {
 	@Test
 	void testPostOrder() {
 		testInPrePostOrderTraversal_DFS.postOrder(root);
-		List<Integer> visitedNodes = testInPrePostOrderTraversal_DFS.getVisited();
+		List<Integer> visitedNodes = testInPrePostOrderTraversal_DFS.getPostOrderVisited();
 		assertEquals(visitedNodes.get(0).intValue(), 9);
 		assertEquals(visitedNodes.get(3).intValue(), 3);
 		assertEquals(visitedNodes.get(6).intValue(), 10);
 
 	}
-
 
 }

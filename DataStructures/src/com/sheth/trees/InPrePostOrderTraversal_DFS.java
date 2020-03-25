@@ -5,19 +5,21 @@ import java.util.List;
 
 public class InPrePostOrderTraversal_DFS<T> {
 
-	private List<T> visited = new ArrayList<T>();
+	private List<T> inOrderVisited = new ArrayList<T>();
+	private List<T> preOrderVisited = new ArrayList<T>();
+	private List<T> postOrderVisited = new ArrayList<T>();
 
 	public void inOrder(BinaryTreeNode<T> node) {
 		if (node != null) {
 			inOrder(node.getLeft());
-			visited.add(node.getData());
+			inOrderVisited.add(node.getData());
 			inOrder(node.getRight());
 		}
 	}
 
 	public void preOrder(BinaryTreeNode<T> node) {
 		if (node != null) {
-			visited.add(node.getData());
+			preOrderVisited.add(node.getData());
 			preOrder(node.getLeft());
 			preOrder(node.getRight());
 		}
@@ -27,12 +29,19 @@ public class InPrePostOrderTraversal_DFS<T> {
 		if (node != null) {
 			postOrder(node.getLeft());
 			postOrder(node.getRight());
-			visited.add(node.getData());
+			postOrderVisited.add(node.getData());
 		}
 	}
 
-	public List<T> getVisited() {
-		return visited;
+	public List<T> getInOrderVisited() {
+		return inOrderVisited;
 	}
 
+	public List<T> getPreOrderVisited() {
+		return preOrderVisited;
+	}
+
+	public List<T> getPostOrderVisited() {
+		return postOrderVisited;
+	}
 }
