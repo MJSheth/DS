@@ -1,7 +1,6 @@
 package com.sheth.test.trees;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -35,7 +34,7 @@ class TestBinaryTreeUtil {
 	void testGetHeight() {
 		int height = BinaryTreeUtil.getHeightOrMaxDepth(root);
 		assertEquals(height, 3);
-		
+
 	}
 
 }
