@@ -9,6 +9,7 @@ public class InPrePostOrderTraversal_DFS<T> {
 	private List<T> preOrderVisited = new ArrayList<T>();
 	private List<T> postOrderVisited = new ArrayList<T>();
 
+	// If applied on BST then it gives nodes in ascending order
 	public void inOrder(BinaryTreeNode<T> node) {
 		if (node != null) {
 			inOrder(node.getLeft());
@@ -17,6 +18,7 @@ public class InPrePostOrderTraversal_DFS<T> {
 		}
 	}
 
+	// Root node is always the first node to be visited
 	public void preOrder(BinaryTreeNode<T> node) {
 		if (node != null) {
 			preOrderVisited.add(node.getData());
@@ -25,6 +27,7 @@ public class InPrePostOrderTraversal_DFS<T> {
 		}
 	}
 
+	// Root node is always the last node to be visited
 	public void postOrder(BinaryTreeNode<T> node) {
 		if (node != null) {
 			postOrder(node.getLeft());
