@@ -49,28 +49,28 @@ class TestLevelOrderTraversal_BFT {
 	@Test
 	void testGetLevelOrder_BFS_Traversal() {
 		List<Integer> visitedNodes = testLevelOrderTraversal_BFS.getLevelOrder_BFS_Traversal(root);
-		assertEquals(visitedNodes.get(0).intValue(), 10);
-		assertEquals(visitedNodes.get(2).intValue(), 20);
-		assertEquals(visitedNodes.get(4).intValue(), 18);
-		assertEquals(visitedNodes.get(6).intValue(), 7);
+		assertEquals(10, visitedNodes.get(0).intValue());
+		assertEquals(20, visitedNodes.get(2).intValue());
+		assertEquals(18, visitedNodes.get(4).intValue());
+		assertEquals(7, visitedNodes.get(6).intValue());
 	}
 
 	@Test
 	void testGetListOfNodesAtEachLevel() {
 		Map<Integer, List<Integer>> levelNodesMap = testLevelOrderTraversal_BFS.getListOfNodesAtEachLevel(root);
 
-		assertEquals(levelNodesMap.get(1).get(0), 10);
-		assertEquals(levelNodesMap.get(1).size(), 1);
+		assertEquals(10, levelNodesMap.get(1).get(0));
+		assertEquals(1, levelNodesMap.get(1).size());
 
-		assertEquals(levelNodesMap.get(2).get(0), 5);
-		assertEquals(levelNodesMap.get(2).get(1), 20);
-		assertEquals(levelNodesMap.get(2).size(), 2);
+		assertEquals(5, levelNodesMap.get(2).get(0));
+		assertEquals(20, levelNodesMap.get(2).get(1));
+		assertEquals(2, levelNodesMap.get(2).size());
 
-		assertEquals(levelNodesMap.get(3).get(0), 9);
-		assertEquals(levelNodesMap.get(3).get(1), 18);
-		assertEquals(levelNodesMap.get(3).get(2), 3);
-		assertEquals(levelNodesMap.get(3).get(3), 7);
-		assertEquals(levelNodesMap.get(3).size(), 4);
+		assertEquals(9, levelNodesMap.get(3).get(0));
+		assertEquals(18, levelNodesMap.get(3).get(1));
+		assertEquals(3, levelNodesMap.get(3).get(2));
+		assertEquals(7, levelNodesMap.get(3).get(3));
+		assertEquals(4, levelNodesMap.get(3).size());
 	}
 
 }

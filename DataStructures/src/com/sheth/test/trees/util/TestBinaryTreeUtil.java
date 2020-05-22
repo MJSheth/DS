@@ -33,7 +33,7 @@ class TestBinaryTreeUtil {
 	@Test
 	void testGetHeight() {
 		int height = BinaryTreeUtil.getHeightOrMaxDepth(root);
-		assertEquals(height, 3);
+		assertEquals(3, height);
 
 	}
 

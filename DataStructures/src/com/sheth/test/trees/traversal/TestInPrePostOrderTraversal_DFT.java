@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.List;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -44,32 +45,47 @@ class TestInPrePostOrderTraversal_DFT {
 		n2.setLeft(n5);
 		n2.setRight(n6);
 	}
+	
+	@AfterEach
+	void tearDown() {
+		testInPrePostOrderTraversal_DFT.clearAllLists();
+	}
 
 	@Test
 	void testInOrder() {
 		testInPrePostOrderTraversal_DFT.inOrder(root);
 		List<Integer> visitedNodes = testInPrePostOrderTraversal_DFT.getInOrderVisited();
-		assertEquals(visitedNodes.get(0).intValue(), 9);
-		assertEquals(visitedNodes.get(3).intValue(), 10);
-		assertEquals(visitedNodes.get(6).intValue(), 7);
+		assertEquals(9 , visitedNodes.get(0).intValue());
+		assertEquals(10, visitedNodes.get(3).intValue());
+		assertEquals(7, visitedNodes.get(6).intValue());
 	}
 
+	@Test
+	void testInOrderNonRecursive() {
+		testInPrePostOrderTraversal_DFT.inOrderWithoutRecursion(root);
+		List<Integer> visitedNodes = testInPrePostOrderTraversal_DFT.getInOrderVisited();
+		assertEquals(9 , visitedNodes.get(0).intValue());
+		assertEquals(10, visitedNodes.get(3).intValue());
+		assertEquals(7, visitedNodes.get(6).intValue());
+	}
+
+	
 	@Test
 	void testPreOrder() {
 		testInPrePostOrderTraversal_DFT.preOrder(root);
 		List<Integer> visitedNodes = testInPrePostOrderTraversal_DFT.getPreOrderVisited();
-		assertEquals(visitedNodes.get(0).intValue(), 10);
-		assertEquals(visitedNodes.get(3).intValue(), 18);
-		assertEquals(visitedNodes.get(6).intValue(), 7);
+		assertEquals(10, visitedNodes.get(0).intValue());
+		assertEquals(18, visitedNodes.get(3).intValue());
+		assertEquals(7, visitedNodes.get(6).intValue());
 	}
 
 	@Test
 	void testPostOrder() {
 		testInPrePostOrderTraversal_DFT.postOrder(root);
 		List<Integer> visitedNodes = testInPrePostOrderTraversal_DFT.getPostOrderVisited();
-		assertEquals(visitedNodes.get(0).intValue(), 9);
-		assertEquals(visitedNodes.get(3).intValue(), 3);
-		assertEquals(visitedNodes.get(6).intValue(), 10);
+		assertEquals(9, visitedNodes.get(0).intValue());
+		assertEquals(3, visitedNodes.get(3).intValue());
+		assertEquals(10, visitedNodes.get(6).intValue());
 
 	}
 

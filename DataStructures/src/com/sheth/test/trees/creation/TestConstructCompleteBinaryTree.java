@@ -50,13 +50,13 @@ class TestConstructCompleteBinaryTree {
 		inputList.add(7);
 
 		BinaryTreeNode<Integer> root = testConstructCompleteBinaryTree.fromList(inputList);
-		assertEquals(root.getData(), 10);
-		assertEquals(root.getLeft().getData(), 5);
-		assertEquals(root.getRight().getData(), 20);
-		assertEquals(root.getLeft().getLeft().getData(), 9);
-		assertEquals(root.getLeft().getRight().getData(), 18);
-		assertEquals(root.getRight().getLeft().getData(), 3);
-		assertEquals(root.getRight().getRight().getData(), 7);
+		assertEquals(10, root.getData());
+		assertEquals(5, root.getLeft().getData());
+		assertEquals(20, root.getRight().getData());
+		assertEquals(9, root.getLeft().getLeft().getData());
+		assertEquals(18, root.getLeft().getRight().getData());
+		assertEquals(3, root.getRight().getLeft().getData());
+		assertEquals(7, root.getRight().getRight().getData());
 
 		
 		inputList.clear();
@@ -67,13 +67,13 @@ class TestConstructCompleteBinaryTree {
 		inputList.add(30);
 		inputList.add(36);
 		root = testConstructCompleteBinaryTree.fromList(inputList);
-		assertEquals(root.getData(), 10);
-		assertEquals(root.getLeft().getData(), 12);
-		assertEquals(root.getRight().getData(), 15);
-		assertEquals(root.getLeft().getLeft().getData(), 25);
-		assertEquals(root.getLeft().getRight().getData(), 30);
-		assertEquals(root.getRight().getLeft().getData(), 36);
-		assertEquals(root.getRight().getRight(), null);
+		assertEquals(10, root.getData());
+		assertEquals(12, root.getLeft().getData());
+		assertEquals(15, root.getRight().getData());
+		assertEquals(25, root.getLeft().getLeft().getData());
+		assertEquals(30, root.getLeft().getRight().getData());
+		assertEquals(36, root.getRight().getLeft().getData());
+		assertEquals(null, root.getRight().getRight());
 	}
 
 	@Test
@@ -82,24 +82,24 @@ class TestConstructCompleteBinaryTree {
 		Integer[] inputArr1 = { 10, 5, 20, 9, 18, 3, 7 };
 
 		BinaryTreeNode<Integer> root = testConstructCompleteBinaryTree.fromArray(inputArr1);
-		assertEquals(root.getData(), 10);
-		assertEquals(root.getLeft().getData(), 5);
-		assertEquals(root.getRight().getData(), 20);
-		assertEquals(root.getLeft().getLeft().getData(), 9);
-		assertEquals(root.getLeft().getRight().getData(), 18);
-		assertEquals(root.getRight().getLeft().getData(), 3);
-		assertEquals(root.getRight().getRight().getData(), 7);
+		assertEquals(10, root.getData());
+		assertEquals(5, root.getLeft().getData());
+		assertEquals(20, root.getRight().getData());
+		assertEquals(9, root.getLeft().getLeft().getData());
+		assertEquals(18, root.getLeft().getRight().getData());
+		assertEquals(3, root.getRight().getLeft().getData());
+		assertEquals(7, root.getRight().getRight().getData());
 
 		Integer[] inputArr2 = { 10, 12, 15, 25, 30, 36 };
 
 		root = testConstructCompleteBinaryTree.fromArray(inputArr2);
-		assertEquals(root.getData(), 10);
-		assertEquals(root.getLeft().getData(), 12);
-		assertEquals(root.getRight().getData(), 15);
-		assertEquals(root.getLeft().getLeft().getData(), 25);
-		assertEquals(root.getLeft().getRight().getData(), 30);
-		assertEquals(root.getRight().getLeft().getData(), 36);
-		assertEquals(root.getRight().getRight(), null);
+		assertEquals(10, root.getData());
+		assertEquals(12, root.getLeft().getData());
+		assertEquals(15, root.getRight().getData());
+		assertEquals(25, root.getLeft().getLeft().getData());
+		assertEquals(30, root.getLeft().getRight().getData());
+		assertEquals(36, root.getRight().getLeft().getData());
+		assertEquals(null, root.getRight().getRight());
 	}
 
 }

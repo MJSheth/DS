@@ -41,7 +41,7 @@ class TestValidateCompletenessOfABinaryTree {
 	@Test
 	void testIsCompleteBinaryTree() {
 		boolean isCompleteBinaryTree = testValidateCompletenessOfABinaryTree.isCompleteBinaryTree(root);
-		assertEquals(isCompleteBinaryTree, true);
+		assertEquals(true, isCompleteBinaryTree);
 	}
 
 }
