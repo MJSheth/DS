@@ -13,6 +13,17 @@ import com.sheth.trees.LevelOrderTraversal_BFT;
 
 class TestLevelOrderTraversal_BFT {
 
+	/* Input
+	 * 
+				10
+		    /         \  
+		  5           20  
+		 /  \         /  \
+		9    18     3     7
+
+	 *
+	 */
+
 	private LevelOrderTraversal_BFT<Integer> testLevelOrderTraversal_BFS;
 	private BinaryTreeNode<Integer> root;
 

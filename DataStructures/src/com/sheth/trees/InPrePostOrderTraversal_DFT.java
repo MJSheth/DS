@@ -3,6 +3,13 @@ package com.sheth.trees;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * InOrder, PreOrder and PostOrder traversal are called Depth First Traversal
+ * 
+ * @author mesheth
+ *
+ * @param <T>
+ */
 public class InPrePostOrderTraversal_DFT<T> {
 
 	private List<T> inOrderVisited = new ArrayList<T>();

@@ -6,9 +6,35 @@ import java.util.List;
 import java.util.Map;
 import java.util.Queue;
 
-// https://www.youtube.com/watch?v=86g8jAQug04
+/**
+ * LevelOrderTraversal is also known as Breadth First Traversal
+ * 
+ * 1. Use queue to discover nodes
+ * 
+ * 2. Add root node to discovered queue
+ * 
+ * 3. Iterate till discovered queue is not empty.
+ * 
+ * 4. Remove first element from the queue with each loop and mark it as visited
+ * (Add in list or Map)
+ * 
+ * 5. If visited node has left or right child, add them to discovered queue
+ * respectively
+ * 
+ * 
+ * @author mesheth
+ *
+ * @param <T>
+ */
 
 public class LevelOrderTraversal_BFT<T> {
+
+	/**
+	 * Get List of nodes in level order traversal format
+	 * 
+	 * @param node
+	 * @return
+	 */
 	public List<T> getLevelOrder_BFS_Traversal(BinaryTreeNode<T> node) {
 		// Maintains list of all visited nodes in level order traversal
 		List<T> visited = new LinkedList<T>();
@@ -35,6 +61,12 @@ public class LevelOrderTraversal_BFT<T> {
 		return visited;
 	}
 
+	/**
+	 * Get list of nodes at each level
+	 * 
+	 * @param node
+	 * @return
+	 */
 	public Map<Integer, List<T>> getListOfNodesAtEachLevel(BinaryTreeNode<T> node) {
 		// Map will container level as its Key and List (of node values) as its value
 		Map<Integer, List<T>> levelNodesMap = new LinkedHashMap<Integer, List<T>>();
