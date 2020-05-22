@@ -12,8 +12,33 @@ import com.sheth.trees.ConstructCompleteBinaryTree;
 
 class TestConstructCompleteBinaryTree {
 
+	/* Input 1
+	 * 
+				10
+		    /         \  
+		  5           20  
+		 /  \         /  \
+		9    18     3     7
+
+	 *
+	 */
+
+	
+	/* Input 2
+	 * 
+				10
+		    /         \  
+		  12           15  
+		 /  \         /  
+		25   30     36     
+
+	 *
+	 */
+
+	
 	@Test
 	void testFromList() {
+
 		ConstructCompleteBinaryTree<Integer> testConstructCompleteBinaryTree = new ConstructCompleteBinaryTree<Integer>();
 		List<Integer> inputList = new LinkedList<Integer>();
 		inputList.add(10);
@@ -33,6 +58,7 @@ class TestConstructCompleteBinaryTree {
 		assertEquals(root.getRight().getLeft().getData(), 3);
 		assertEquals(root.getRight().getRight().getData(), 7);
 
+		
 		inputList.clear();
 		inputList.add(10);
 		inputList.add(12);
