@@ -9,16 +9,16 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import com.sheth.trees.BinaryTreeNode;
-import com.sheth.trees.LevelOrderTraversal_BFS;
+import com.sheth.trees.LevelOrderTraversal_BFT;
 
-class TestLevelOrderTraversal_BFS {
+class TestLevelOrderTraversal_BFT {
 
-	private LevelOrderTraversal_BFS<Integer> testLevelOrderTraversal_BFS;
+	private LevelOrderTraversal_BFT<Integer> testLevelOrderTraversal_BFS;
 	private BinaryTreeNode<Integer> root;
 
 	@BeforeEach
 	void setup() {
-		testLevelOrderTraversal_BFS = new LevelOrderTraversal_BFS<Integer>();
+		testLevelOrderTraversal_BFS = new LevelOrderTraversal_BFT<Integer>();
 		root = new BinaryTreeNode<Integer>(10);
 		BinaryTreeNode<Integer> n1 = new BinaryTreeNode<Integer>(5);
 		BinaryTreeNode<Integer> n2 = new BinaryTreeNode<Integer>(20);

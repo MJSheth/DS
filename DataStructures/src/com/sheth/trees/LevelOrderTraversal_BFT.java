@@ -8,7 +8,7 @@ import java.util.Queue;
 
 // https://www.youtube.com/watch?v=86g8jAQug04
 
-public class LevelOrderTraversal_BFS<T> {
+public class LevelOrderTraversal_BFT<T> {
 	public List<T> getLevelOrder_BFS_Traversal(BinaryTreeNode<T> node) {
 		// Maintains list of all visited nodes in level order traversal
 		List<T> visited = new LinkedList<T>();

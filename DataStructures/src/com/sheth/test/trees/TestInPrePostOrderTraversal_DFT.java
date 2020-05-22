@@ -8,16 +8,16 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import com.sheth.trees.BinaryTreeNode;
-import com.sheth.trees.InPrePostOrderTraversal_DFS;
+import com.sheth.trees.InPrePostOrderTraversal_DFT;
 
-class TestInPrePostOrderTraversal_DFS {
+class TestInPrePostOrderTraversal_DFT {
 
-	private InPrePostOrderTraversal_DFS<Integer> testInPrePostOrderTraversal_DFS;
+	private InPrePostOrderTraversal_DFT<Integer> testInPrePostOrderTraversal_DFS;
 	private BinaryTreeNode<Integer> root;
 
 	@BeforeEach
 	void setup() {
-		testInPrePostOrderTraversal_DFS = new InPrePostOrderTraversal_DFS<Integer>();
+		testInPrePostOrderTraversal_DFS = new InPrePostOrderTraversal_DFT<Integer>();
 		root = new BinaryTreeNode<Integer>(10);
 		BinaryTreeNode<Integer> n1 = new BinaryTreeNode<Integer>(5);
 		BinaryTreeNode<Integer> n2 = new BinaryTreeNode<Integer>(20);

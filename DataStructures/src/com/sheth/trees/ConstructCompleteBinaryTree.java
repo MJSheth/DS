@@ -4,6 +4,23 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+/**
+ * Complete Binary Tree is a Tree where all levels are completely filled except
+ * the last level
+ * 
+ * 1. Use queue to discover nodes.
+ * 
+ * 2. If discovered node has left or right child empty then insert new node as
+ * its left or right child respectively
+ * 
+ * 3. Add this new node back to the queue so that it can be further discovered
+ * 
+ * 4. Repeat until input list/array is traversed completely
+ * 
+ * @author mesheth
+ *
+ * @param <T>
+ */
 public class ConstructCompleteBinaryTree<T> {
 
 	public BinaryTreeNode<T> fromList(List<T> inputList) {
@@ -14,8 +31,11 @@ public class ConstructCompleteBinaryTree<T> {
 		BinaryTreeNode<T> root = new BinaryTreeNode<T>(inputList.get(listIndex++));
 		Queue<BinaryTreeNode<T>> discovered = new LinkedList<BinaryTreeNode<T>>();
 
+		// Add root to discovered queue
 		discovered.add(root);
 		while (!discovered.isEmpty()) {
+			
+			// Remove top node from the queue (discovered) 
 			BinaryTreeNode<T> node = discovered.remove();
 
 			// Check if you can add left node
