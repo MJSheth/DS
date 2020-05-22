@@ -1,4 +1,6 @@
-package com.sheth.trees;
+package com.sheth.trees.util;
+
+import com.sheth.trees.common.BinaryTreeNode;
 
 public class BinaryTreeUtil<T> {
 

@@ -1,8 +1,10 @@
-package com.sheth.trees;
+package com.sheth.trees.creation;
 
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+
+import com.sheth.trees.common.BinaryTreeNode;
 
 /**
  * Complete Binary Tree is a Tree where all levels are completely filled except

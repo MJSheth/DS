@@ -1,4 +1,4 @@
-package com.sheth.test.trees;
+package com.sheth.test.trees.creation;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -7,8 +7,8 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import com.sheth.trees.BinaryTreeNode;
-import com.sheth.trees.ConstructCompleteBinaryTree;
+import com.sheth.trees.common.BinaryTreeNode;
+import com.sheth.trees.creation.ConstructCompleteBinaryTree;
 
 class TestConstructCompleteBinaryTree {
 

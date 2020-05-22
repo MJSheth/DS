@@ -1,7 +1,9 @@
-package com.sheth.trees;
+package com.sheth.trees.misc;
 
 import java.util.LinkedList;
 import java.util.Queue;
+
+import com.sheth.trees.common.BinaryTreeNode;
 
 public class ValidateCompletenessOfABinaryTree<T> {
 

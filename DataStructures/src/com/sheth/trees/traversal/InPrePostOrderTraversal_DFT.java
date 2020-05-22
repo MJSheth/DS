@@ -1,7 +1,9 @@
-package com.sheth.trees;
+package com.sheth.trees.traversal;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.sheth.trees.common.BinaryTreeNode;
 
 /**
  * InOrder, PreOrder and PostOrder traversal are called Depth First Traversal

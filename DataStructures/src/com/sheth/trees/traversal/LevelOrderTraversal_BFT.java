@@ -1,10 +1,12 @@
-package com.sheth.trees;
+package com.sheth.trees.traversal;
 
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Queue;
+
+import com.sheth.trees.common.BinaryTreeNode;
 
 /**
  * LevelOrderTraversal is also known as Breadth First Traversal

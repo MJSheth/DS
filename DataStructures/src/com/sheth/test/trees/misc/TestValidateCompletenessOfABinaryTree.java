@@ -1,12 +1,12 @@
-package com.sheth.test.trees;
+package com.sheth.test.trees.misc;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import com.sheth.trees.BinaryTreeNode;
-import com.sheth.trees.ValidateCompletenessOfABinaryTree;
+import com.sheth.trees.common.BinaryTreeNode;
+import com.sheth.trees.misc.ValidateCompletenessOfABinaryTree;
 
 class TestValidateCompletenessOfABinaryTree {
 

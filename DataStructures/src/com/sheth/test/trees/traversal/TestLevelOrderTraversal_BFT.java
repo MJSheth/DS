@@ -1,4 +1,4 @@
-package com.sheth.test.trees;
+package com.sheth.test.trees.traversal;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -8,8 +8,8 @@ import java.util.Map;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import com.sheth.trees.BinaryTreeNode;
-import com.sheth.trees.LevelOrderTraversal_BFT;
+import com.sheth.trees.common.BinaryTreeNode;
+import com.sheth.trees.traversal.LevelOrderTraversal_BFT;
 
 class TestLevelOrderTraversal_BFT {
 

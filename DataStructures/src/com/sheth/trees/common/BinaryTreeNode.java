@@ -1,4 +1,4 @@
-package com.sheth.trees;
+package com.sheth.trees.common;
 
 public class BinaryTreeNode<T> {
 	private T data;
